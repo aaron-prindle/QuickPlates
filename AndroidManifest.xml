@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quickplates"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <permission
+        android:name="com.quickplates.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" >
+    </permission>
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="com.quickplates.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/quickplates"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB_II8-u0MUiecccngoe2PcNFQLUHNrxvM" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="com.quickplates.UserLoginActivity"
+            android:label="@string/title_activity_user_login"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.quickplates.RestaurantViewActivity"
+            android:label="@string/title_activity_restaurant_view"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.quickplates.QuickPlatesMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.quickplates.FriendActivity"
+            android:label="@string/title_activity_friend"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.quickplates.Friends2Activity"
+            android:label="@string/title_activity_friends2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.quickplates.SuggestionActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
